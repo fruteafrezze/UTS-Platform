@@ -13,10 +13,11 @@ function validateNama(nama) {
     if (/\d/.test(nama)) throw new Error("Nama tidak boleh mengandung angka!");
 }
 
-// Validasi Email (harus mengandung '@')
+// Validasi Email (harus mengandung '@' dan '.')
 function validateEmail(email) {
     if (email.trim() === "") throw new Error("Email tidak boleh kosong!");
     if (!email.includes("@")) throw new Error("Email harus mengandung '@'!");
+    if (!email.includes(".")) throw new Error("Email harus mengandung '.'!");
 }
 
 // Validasi Jumlah Pilihan (harus angka positif)
